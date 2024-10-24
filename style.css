@@ -1,0 +1,154 @@
+/* Reset básico para margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Montserrat', Arial, sans-serif; /* Fonte atualizada */
+}
+
+/* Estilo do menu */
+.navbar {
+    background-color: #1D2A76; /* Cor principal */
+    padding: 15px; /* Aumenta o padding do navbar */
+}
+
+.navbar-brand-logo {
+    display: block; /* Faz com que a imagem seja um bloco */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 100px; /* Aumenta a largura da logo */
+    height: auto; /* Mantém a proporção */
+}
+
+.navbar-brand {
+    color: #FFFFFF !important; /* Cor do texto do menu */
+}
+
+
+.navbar-nav .nav-link.activer {
+    background-color: #F29415; /* Cor de fundo quando ativo */
+    color: #FFFFFF !important; /* Mantém o texto branco */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.navbar-nav .nav-link {
+    color: #FFFFFF !important; /* Cor do texto do menu */
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #F29415 !important; /* Cor do hover */
+}
+
+.navbar-nav .nav-link.activer:hover {
+    color: #000000 !important; /* Cor do hover */
+}
+
+/* Estilo da seção Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover; /* Faz a imagem cobrir toda a área da div */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    padding: 50px 0; /* Ajusta o espaçamento interno */
+    color: #ffffff; /* Define a cor do texto como branco para contraste */
+    background-image: url('11.png'); /* Altere para o caminho da sua imagem */
+}
+.hero {
+    position: relative; /* Permite posicionar elementos filhos */
+    overflow: hidden; /* Evita que o conteúdo transborde */
+}
+
+.hero::before {
+    content: ""; /* Cria um pseudo-elemento */
+    position: absolute; /* Posiciona o overlay */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5); /* Cor branca com transparência */
+    z-index: 1; /* Coloca o overlay atrás do texto */
+}
+
+.hero h1,
+.hero p,
+.hero a {
+    position: relative; /* Posiciona o texto acima do overlay */
+    z-index: 2; /* Garante que o texto fique acima do overlay */
+}
+
+
+.hero h1 {
+    font-size: 3rem;
+    color: #000000; /* Cor do título */
+}
+
+
+
+.hero p {
+    font-size: 1.5rem;
+    color: #000000; /* Cor do texto */
+}
+
+/* Estilo das seções */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    color: #1D2A76; /* Cor dos títulos das seções */
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #343A40; /* Cor do texto das seções */
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #212121; /* Cor do footer */
+    color: #FFFFFF; /* Cor do texto do footer */
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+   
+
+    .hero {
+        height: 80vh; /* Reduz a altura em telas menores */
+        padding: 20px; /* Adiciona um pouco de preenchimento */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Reduz o tamanho do parágrafo */
+    }
+
+    .hero a {
+        padding: 10px 20px; /* Ajusta o preenchimento do botão */
+        font-size: 1rem; /* Reduz o tamanho da fonte do botão */
+    }
+}
+
+/* Estilo das caixas de recurso */
+.feature-box {
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    padding: 20px;
+    transition: box-shadow 0.3s;
+}
+
+.feature-box:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
